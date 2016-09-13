@@ -225,10 +225,11 @@
     <pathelement location="${basedir}/modules/fieldcore/resources/quickhull3d.jar"/>
   </path>
   
+  <!-- deprecated in JDK 9
   <path id="library.rt.classpath">
     <pathelement location="${basedir}/../../../Library/Java/JavaVirtualMachines/jdk1.9.0_40.jdk/Contents/Home/jre/lib/rt.jar"/>
   </path>
-  
+  -->
   <path id="library.txtmark-0.14-snapshot.classpath">
     <pathelement location="${basedir}/modules/fieldcore/resources/txtmark-0.14-SNAPSHOT.jar"/>
   </path>
@@ -240,10 +241,11 @@
   
   <!-- Global Libraries -->
   
+  <!-- deprecated in JDK 9
   <path id="library.rt.classpath">
     <pathelement location="/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home/jre/lib/rt.jar"/>
   </path>
-  
+  -->  
   <!-- Modules -->
   
   
@@ -268,27 +270,27 @@
   <path id="fieldagent.module.production.classpath">
     <path refid="${module.jdk.classpath.fieldagent}"/>
     <path refid="library.guava-16.0.1_(2).classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldagent.runtime.production.module.classpath">
     <pathelement location="${fieldagent.output.dir}"/>
     <path refid="library.guava-16.0.1_(2).classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldagent.module.classpath">
     <path refid="${module.jdk.classpath.fieldagent}"/>
     <pathelement location="${fieldagent.output.dir}"/>
     <path refid="library.guava-16.0.1_(2).classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldagent.runtime.module.classpath">
     <pathelement location="${fieldagent.testoutput.dir}"/>
     <pathelement location="${fieldagent.output.dir}"/>
     <path refid="library.guava-16.0.1_(2).classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
@@ -364,7 +366,7 @@
     <path refid="library.guava-16.0.1_(2).classpath"/>
     <path refid="library.fieldlinker.classpath"/>
     <path refid="library.lwjgl_glfw.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
     <path refid="library.guava-16.0.1.classpath"/>
     <path refid="library.lwjgl.classpath"/>
     <path refid="library.commons-math3-3.2.classpath"/>
@@ -386,7 +388,7 @@
     <pathelement location="${fieldlinker.output.dir}"/>
     <path refid="fieldagent.runtime.production.module.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
     <path refid="library.guava-16.0.1.classpath"/>
     <path refid="library.lwjgl.classpath"/>
     <path refid="library.commons-math3-3.2.classpath"/>
@@ -411,7 +413,7 @@
     <pathelement location="${fieldagent.output.dir}"/>
     <path refid="library.guava-16.0.1_(2).classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
     <path refid="library.guava-16.0.1.classpath"/>
     <path refid="library.lwjgl.classpath"/>
     <path refid="library.commons-math3-3.2.classpath"/>
@@ -434,7 +436,7 @@
     <pathelement location="${fieldlinker.output.dir}"/>
     <path refid="fieldagent.runtime.module.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
     <path refid="library.guava-16.0.1.classpath"/>
     <path refid="library.lwjgl.classpath"/>
     <path refid="library.commons-math3-3.2.classpath"/>
@@ -561,14 +563,14 @@
     <path refid="library.json-20160212.classpath"/>
     <path refid="library.java_websocket.classpath"/>
     <pathelement location="${fieldlinker.output.dir}"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldcef_win.runtime.production.module.classpath">
     <pathelement location="${fieldcef_win.output.dir}"/>
     <path refid="fieldagent.runtime.production.module.classpath"/>
     <path refid="fieldlinker.runtime.production.module.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldcef_win.module.classpath">
@@ -584,7 +586,7 @@
     <path refid="library.java_websocket.classpath"/>
     <pathelement location="${fieldlinker.testoutput.dir}"/>
     <pathelement location="${fieldlinker.output.dir}"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldcef_win.runtime.module.classpath">
@@ -592,7 +594,7 @@
     <pathelement location="${fieldcef_win.output.dir}"/>
     <path refid="fieldagent.runtime.module.classpath"/>
     <path refid="fieldlinker.runtime.module.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
@@ -670,7 +672,7 @@
     <path refid="library.clojure-1.7.0-alpha4.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldclojure.runtime.production.module.classpath">
@@ -680,7 +682,7 @@
     <path refid="library.clojure-1.7.0-alpha4.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldclojure.module.classpath">
@@ -699,7 +701,7 @@
     <path refid="library.clojure-1.7.0-alpha4.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldclojure.runtime.module.classpath">
@@ -710,7 +712,7 @@
     <path refid="library.clojure-1.7.0-alpha4.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
@@ -794,7 +796,7 @@
     <path refid="library.zmq.classpath"/>
     <path refid="library.jpy-0.8-snapshot.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldipython.runtime.production.module.classpath">
@@ -805,7 +807,7 @@
     <path refid="library.zmq.classpath"/>
     <path refid="library.jpy-0.8-snapshot.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldipython.module.classpath">
@@ -825,7 +827,7 @@
     <path refid="library.zmq.classpath"/>
     <path refid="library.jpy-0.8-snapshot.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldipython.runtime.module.classpath">
@@ -837,7 +839,7 @@
     <path refid="library.zmq.classpath"/>
     <path refid="library.jpy-0.8-snapshot.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
@@ -920,7 +922,7 @@
     <path refid="library.jython-standalone-2.7-b3.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldjython.runtime.production.module.classpath">
@@ -930,7 +932,7 @@
     <path refid="library.jython-standalone-2.7-b3.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldjython.module.classpath">
@@ -949,7 +951,7 @@
     <path refid="library.jython-standalone-2.7-b3.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldjython.runtime.module.classpath">
@@ -960,7 +962,7 @@
     <path refid="library.jython-standalone-2.7-b3.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
@@ -1041,7 +1043,7 @@
     <path refid="library.javacl-1.0-20141231.011028-81-shaded.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldopencl.runtime.production.module.classpath">
@@ -1050,7 +1052,7 @@
     <path refid="library.javacl-1.0-20141231.011028-81-shaded.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldopencl.module.classpath">
@@ -1066,7 +1068,7 @@
     <path refid="library.javacl-1.0-20141231.011028-81-shaded.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldopencl.runtime.module.classpath">
@@ -1076,7 +1078,7 @@
     <path refid="library.javacl-1.0-20141231.011028-81-shaded.classpath"/>
     <pathelement location="${basedir}/modules/fieldcore/resources/nashorn-local.jar"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
@@ -1156,7 +1158,7 @@
     <pathelement location="${fieldlinker.output.dir}"/>
     <path refid="library.processing_core.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldprocessing.runtime.production.module.classpath">
@@ -1164,7 +1166,7 @@
     <path refid="fieldlinker.runtime.production.module.classpath"/>
     <path refid="library.processing_core.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldprocessing.module.classpath">
@@ -1179,7 +1181,7 @@
     <pathelement location="${fieldlinker.output.dir}"/>
     <path refid="library.processing_core.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   <path id="fieldprocessing.runtime.module.classpath">
@@ -1188,7 +1190,7 @@
     <path refid="fieldlinker.runtime.module.classpath"/>
     <path refid="library.processing_core.classpath"/>
     <path refid="library.fieldlinker.classpath"/>
-    <path refid="library.rt.classpath"/>
+<!-- deprecated in JDK 9    <path refid="library.rt.classpath"/> -->
   </path>
   
   
