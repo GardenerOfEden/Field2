@@ -13,6 +13,7 @@ $java \
     -Xmx4g \
     -Xms4g \
     --add-exports jdk.management/com.sun.management.internal=ALL-UNNAMED \
+    -Dorg.lwjgl.util.Debug=true \
     -cp \
 $fieldhome/lib/linux64:\
 $fieldhome/out/artifacts/fieldlinker_jar/fieldlinker.jar:\
