@@ -6,18 +6,33 @@ PID=` ps auxw | grep 'field.db.server' | grep java | grep -v grep | awk '{print 
 
 echo $PID
 
-#java=/usr/lib/jvm/jdk1.9.0/bin/java
-java=$1
+java=/usr/lib/jvm/java-9-jdk/bin/java
+#java=$1
 
 if [ "x$PID" = "x" ]
 then
     pushd $(dirname `which "$0"`) >/dev/null; fieldhome="$PWD"; popd >/dev/null
 
-    out=$fieldhome/out/production/
+    out=$fieldhome/out/production
 
     echo out is $out
 
-    "$java" -XaddExports:jdk.management/com.sun.management.internal=ALL-UNNAMED -addmods java.xml.bind -Dfield.db.server=1 -DappDir=$fieldhome -Xmx1g -Xms1g -cp $out/fieldcore/orientdb/*:$out/fieldcore:$out/fieldlinker:$out/fieldlinker/orientdb/* fieldbox.io.Server&
+    "$java" \
+        --add-exports=jdk.management/com.sun.management.internal=ALL-UNNAMED \
+        --add-modules=java.xml.bind \
+        -Dfield.db.server=1 \
+        -DappDir=$fieldhome \
+        -Xmx1g \
+        -Xms1g \
+        -cp \
+$out/fieldcore/orientdb/*:\
+$out/fieldcore:\
+$out/fieldlinker:\
+$out/fieldlinker/orientdb/* \
+        -Djava.library.path=\
+$fieldhome:\
+$out/fieldlinker/linux64 \
+        fieldbox.io.Server&
 else
     echo "server already running"
 
